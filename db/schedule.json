@@ -1,0 +1,38 @@
+{
+  "listings": {
+    "listing0": {
+      "address":"1204 Greenfield Ave",
+      "city":"Nashville",
+      "state":"TN",
+      "zip":37216,
+      "squareFootage": 1380,
+      "price": 289500,
+      "numBeds": 2,
+      "numBaths": 1,
+      "description": "Circa 1930s Inglewood Cottage offers original hardwood floors, updated Kitchen and a newly renovated Bath, a workshop in Basement, attic space expansion. Many original details - glass knobs, phone nook, solid wood doors. Great yard with mature trees; within minutes of Riverside Village, shopping and restaurants. Come see!",
+      "estimatedMonthlyMorgage": 1172,
+      "lotInAcres":0.31,
+      "yearBuilt": 1938,
+      "heating": "Forced Air",
+      "cooling": "Central",
+      "imageUrl": "https://photos.zillowstatic.com/p_h/ISa1vdf8hsh2x90000000000.jpg"
+    },
+    "listing1": {
+      "address":"1033 Vaughn Crest Dr",
+      "city":"Franklin",
+      "state":"TN",
+      "zip":37069,
+      "squareFootage": 7898,
+      "price": 4579000,
+      "numBeds": 6,
+      "numBaths": 7,
+      "description": "Lots of storage and room to expand!",
+      "estimatedMonthlyMorgage": 25726,
+      "lotInAcres":3.06,
+      "yearBuilt": 2004,
+      "heating": "Geothermal",
+      "cooling": "Central",
+      "imageUrl": "https://photos.zillowstatic.com/p_f/ISq1exsrpbyzdi1000000000.jpg"
+    }
+  }
+}
