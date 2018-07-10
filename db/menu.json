@@ -1,0 +1,22 @@
+{
+  "menus": {
+    "menu0": {
+      "appetizers":"1204 Greenfield Ave",
+      "burgers":"Nashville",
+      "chicken":"TN",
+      "pastas":37216,
+      "burritos": "1:00 PM",
+      "tacos": "10:00 PM",
+      "desserts": "Live On The Green"
+    },
+    "menu1": {
+      "address":"4321 Main St",
+      "city":"Lebanon",
+      "state":"TN",
+      "zip":37216,
+      "openTime": "2:00 PM",
+      "closingTime": "9:00 PM",
+      "eventAttending": "Car Show"
+    }
+  }
+}
