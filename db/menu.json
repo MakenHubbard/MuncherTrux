@@ -1,22 +1,52 @@
 {
   "menus": {
-    "menu0": {
-      "appetizers":"1204 Greenfield Ave",
-      "burgers":"Nashville",
-      "chicken":"TN",
-      "pastas":37216,
-      "burritos": "1:00 PM",
-      "tacos": "10:00 PM",
-      "desserts": "Live On The Green"
+    "item0": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
     },
-    "menu1": {
-      "address":"4321 Main St",
-      "city":"Lebanon",
-      "state":"TN",
-      "zip":37216,
-      "openTime": "2:00 PM",
-      "closingTime": "9:00 PM",
-      "eventAttending": "Car Show"
+    "item1": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
+    },
+    "item2": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
+    },
+    "item3": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
+    },
+    "item4": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
+    },
+    "item5": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
+    },
+    "item6": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
+    },
+    "item7": {
+      "name": "hoagie",
+      "description":"sandwich",
+      "price": 12.34,
+      "uid": ""
     }
   }
 }

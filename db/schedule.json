@@ -7,7 +7,8 @@
       "zip":37216,
       "openTime": "1:00 PM",
       "closingTime": "10:00 PM",
-      "eventAttending": "Live On The Green"
+      "eventAttending": "Live On The Green",
+      "uid": ""
     },
     "schedule1": {
       "address":"4321 Main St",
@@ -16,7 +17,8 @@
       "zip":37216,
       "openTime": "2:00 PM",
       "closingTime": "9:00 PM",
-      "eventAttending": "Car Show"
+      "eventAttending": "Car Show",
+      "uid": ""
     },
     "schedule2": {
       "address":"4321 Main St",
@@ -25,7 +27,8 @@
       "zip":37216,
       "openTime": "12:00 PM",
       "closingTime": "6:00 PM",
-      "eventAttending": "Carnival"
+      "eventAttending": "Carnival",
+      "uid": ""
     }
   }
 }
