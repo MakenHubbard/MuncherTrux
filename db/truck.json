@@ -1,0 +1,22 @@
+{
+  "Trucks": {
+    "truck0": {
+      "name": "Henry Hungry Hoopty",
+      "bio":"Good eaten on Small budget",
+      "imageUrl": "",
+      "uid": ""
+    },
+    "truck1": {
+      "name": "hoagie",
+      "bio":"sandwich",
+      "imageUrl": "",
+      "uid": ""
+    },
+    "truck2": {
+      "name": "hoagie",
+      "bio":"sandwich",
+      "imageUrl": "",
+      "uid": ""
+    }
+  }
+}
