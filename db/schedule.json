@@ -6,8 +6,8 @@
       "state":"TN",
       "zip":37216,
       "openTime": "1:00 PM",
-      "closingTime": "10:00 PM",
-      "eventAttending": "Live On The Green",
+      "arrival": "10:00 PM",
+      "departure": "Live On The Green",
       "uid": ""
     },
     "schedule1": {
@@ -15,8 +15,8 @@
       "city":"Lebanon",
       "state":"TN",
       "zip":37216,
-      "openTime": "2:00 PM",
-      "closingTime": "9:00 PM",
+      "arrival": "2:00 PM",
+      "departure": "9:00 PM",
       "eventAttending": "Car Show",
       "uid": ""
     },
@@ -25,8 +25,8 @@
       "city":"Clarksville",
       "state":"TN",
       "zip":37216,
-      "openTime": "12:00 PM",
-      "closingTime": "6:00 PM",
+      "arrival": "12:00 PM",
+      "departure": "6:00 PM",
       "eventAttending": "Carnival",
       "uid": ""
     }
