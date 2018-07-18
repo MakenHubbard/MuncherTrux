@@ -88,7 +88,7 @@ class App extends Component {
                     authed={this.state.authed}
                     component={Register}
                   />
-                  <PrivateRoute
+                  <PublicRoute
                     path='/usersinfo'
                     authed={this.state.authed}
                     component={UsersInfo}

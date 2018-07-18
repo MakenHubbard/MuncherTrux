@@ -1,22 +1,20 @@
 {
-  "Trucks": {
-    "truck0": {
-      "name": "Henry Hungry Hoopty",
-      "bio":"Good eaten on Small budget",
-      "imageUrl": "",
-      "uid": ""
-    },
-    "truck1": {
-      "name": "hoagie",
-      "bio":"sandwich",
-      "imageUrl": "",
-      "uid": ""
-    },
-    "truck2": {
-      "name": "hoagie",
-      "bio":"sandwich",
-      "imageUrl": "",
-      "uid": ""
-    }
-  }
+	"truck0": {
+		"name": "Henry's Hungry Hoopty",
+		"bio": "Good eaten on Small budget",
+		"imageUrl": "https://s3.amazonaws.com/media.dpn/39967_photo2f.jpg",
+		"uid": "036X32CpMyP0DqLpKA7t7FJq9Kh1"
+	},
+	"truck1": {
+		"name": "The Cadillac Cozone",
+		"bio": "THe fanciest of Cazone's.",
+		"imageUrl": "http://www.architecturedsgn.com/wp-content/uploads/2018/02/truck-food-tuck-sketchy-make-awesome-art-custom-trucks-d-floor-plan-before-we-build-your-dream-on-custom-food-tuck-sketchy-trucks.jpg",
+		"uid": "tmL7BP4TKBWpHtHG47hMEcvwJZ93"
+	},
+	"truck2": {
+		"name": "P.O.S Burritos",
+		"bio": "Greaaaat going in, Not so much. Will give extra napkins.",
+		"imageUrl": "https://i.pinimg.com/originals/ae/88/74/ae8874479c9646b722f611e2f05eb6a3.jpg",
+		"uid": "psISHgtvEOV38gYmtUXZye7pie93"
+	}
 }
