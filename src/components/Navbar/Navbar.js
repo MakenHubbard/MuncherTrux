@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import authRequests from '../../firebaseRequests/auth';
 
 import './Navbar.css';
 
 class Navbar extends React.Component {
   render () {
+    const { authed, runAway } = this.props;
+
+    const logoutClickEvent = () => {
+      authRequests.logoutUser();
+      runAway();
+    };
+
     return (
       <div className="Navbar">
         <nav className="navbar navbar-inverse">
@@ -20,28 +28,19 @@ class Navbar extends React.Component {
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               {
-                // authed ? (
-                <ul className="nav navbar-nav navbar-right">
-                  <li>
-                    <p> Login In </p>
-                    {/* <Link to="/inventory">Inventory</Link> */}
-                  </li>
-                  <li>
-                    {/* <Link to="/orders">Orders</Link> */}
-                  </li>
-                  <li className="navbar-form">
-                    {/* <button onClick={logoutClickEvent} className="btn btn-danger">
+                authed ? (
+                  <ul className="nav navbar-nav navbar-right">
+                    <li className="navbar-form">
+                      <button onClick={logoutClickEvent} className="btn btn-default">
                         Logout
-                      </button> */}
+                      </button>
+                    </li>
+                  </ul>
+                ) : (
+                  <li className="nav navbar-form navbar-right">
+                    <button className="btn btn-default">Login In</button>
                   </li>
-                </ul>
-                // ) : (
-                // <ul className="nav navbar-nav navbar-right">
-                //   <li>
-                //     {/* <Link to="/inventory">Login</Link> */}
-                //   </li>
-                // </ul>
-                // )
+                )
               }
 
             </div>
