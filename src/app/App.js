@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Redirect, Switch } from 'react-router-dom';
+import firebase from 'firebase';
 
 import './App.css';
 
@@ -33,9 +34,9 @@ const PublicRoute = ({ component: Component, authed, ...rest }) => {
     <Route
       {...rest}
       render={props =>
-        authed === true
+        authed === false
           ? (<Component {...props} />)
-          : (<Redirect to={{ pathname: '/UsersHome', state: { from: props.location } }} />)
+          : (<Redirect to={{ pathname: '/usershome', state: { from: props.location } }} />)
       }
     />
   );
@@ -46,18 +47,37 @@ class App extends Component {
     authed: false,
   };
 
+  componentDidMount = () => {
+    this.removeListener = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ authed: true });
+      } else {
+        this.setState({ authed: false });
+      }
+    });
+  }
+
+  componentWillUnmount = () => {
+    this.removeListener();
+  };
+
+  runAway = () => {
+    this.setState({authed: false});
+  };
+
   render () {
     return (
       <div className="App">
         <BrowserRouter>
           <div>
             <Navbar
-
+              authed={this.state.authed}
+              runAway={this.runAway}
             />
             <div className="container">
               <div className="row">
                 <Switch>
-                  <Route path="/" exact component={UsersHome} />
+                  <Route path="/" exact component={Login} />
                   <PrivateRoute
                     path="/UsersHome"
                     authed={this.state.authed}
