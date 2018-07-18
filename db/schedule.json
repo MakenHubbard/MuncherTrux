@@ -1,34 +1,32 @@
 {
-  "schedules": {
-    "schedule0": {
-      "address":"1204 Greenfield Ave",
-      "city":"Nashville",
-      "state":"TN",
-      "zip":37216,
-      "openTime": "1:00 PM",
-      "arrival": "10:00 PM",
-      "departure": "Live On The Green",
-      "uid": ""
-    },
-    "schedule1": {
-      "address":"4321 Main St",
-      "city":"Lebanon",
-      "state":"TN",
-      "zip":37216,
-      "arrival": "2:00 PM",
-      "departure": "9:00 PM",
-      "eventAttending": "Car Show",
-      "uid": ""
-    },
-    "schedule2": {
-      "address":"4321 Main St",
-      "city":"Clarksville",
-      "state":"TN",
-      "zip":37216,
-      "arrival": "12:00 PM",
-      "departure": "6:00 PM",
-      "eventAttending": "Carnival",
-      "uid": ""
-    }
-  }
+	"schedule0": {
+		"address": "1204 Greenfield Ave",
+		"city": "Nashville",
+		"state": "TN",
+		"zip": 37216,
+		"openTime": "1:00 PM",
+		"arrival": "10:00 PM",
+		"departure": "Live On The Green",
+		"uid": "036X32CpMyP0DqLpKA7t7FJq9Kh1"
+	},
+	"schedule1": {
+		"address": "4321 Main St",
+		"city": "Lebanon",
+		"state": "TN",
+		"zip": 37216,
+		"arrival": "2:00 PM",
+		"departure": "9:00 PM",
+		"eventAttending": "Car Show",
+		"uid": "tmL7BP4TKBWpHtHG47hMEcvwJZ93"
+	},
+	"schedule2": {
+		"address": "4321 Main St",
+		"city": "Clarksville",
+		"state": "TN",
+		"zip": 37216,
+		"arrival": "12:00 PM",
+		"departure": "6:00 PM",
+		"eventAttending": "Carnival",
+		"uid": "psISHgtvEOV38gYmtUXZye7pie93"
+	}
 }
