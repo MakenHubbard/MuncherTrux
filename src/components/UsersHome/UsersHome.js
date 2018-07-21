@@ -27,33 +27,34 @@ class UsersHome extends React.Component {
       console.log('current user uid', currentUserUid);
       if (truck.uid === currentUserUid) {
         return (
-          <UsersHome
-            truck={truck}
-            index={index}
-            key={truck.id}
-          />
+          <div key={truck.id}>
+            <div className="row">
+              <div className="col-xs-6">
+                {truck.imageUrl}
+              </div>
+              <div className="col-xs-6">
+                {truck.name}
+              </div>
+            </div>
+            <br />
+            <div className="col-xs-12">
+              {truck.bio}
+            </div>
+          </div>
         );
       }
+      this.setState(usersTruck);
     });
     console.log('what are you ?', usersTruck);
 
     return (
       <div className="container">
         <div>
-          <h1>UsersHome</h1>
+          <h1>Users Home</h1>
         </div>
-        <div className="row">
-          <div className="col-xs-6">
-            <p>{usersTruck.name}</p>
-          </div>
-          <div className="col-xs-6">
-            <p>{usersTruck.imageUrl}</p>
-          </div>
-        </div>
-        <div className="col-xs-12">
-          <p>{usersTruck.bio}</p>
-        </div>
+        {usersTruck}
       </div>
+
     );
   };
 };
