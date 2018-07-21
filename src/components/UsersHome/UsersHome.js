@@ -20,34 +20,39 @@ class UsersHome extends React.Component {
       });
   }
 
-  render() {
+  render () {
     const currentUserUid = authRequests.getUid();
-    const usersTruck = this.state.trucks.map((truck) => {
+    const usersTruck = this.state.trucks.map((truck, index) => {
+      console.log('getting truck back', truck);
+      console.log('current user uid', currentUserUid);
       if (truck.uid === currentUserUid) {
         return (
-            <div className="container">
-            <div>
-              <h1>UsersHome</h1>
-            </div>
-            <div className="row">
-              <div className="col-xs-6">
-                <p>{truck.name}</p>
-              </div>
-              <div className="col-xs-6">
-                <p>{truck.imageUrl}</p>
-              </div>
-            </div>
-            <div className="col-xs-12">
-              <p>{truck.bio}</p>
-            </div>
-          </div>
+          <UsersHome
+            truck={truck}
+            index={index}
+            key={truck.id}
+          />
         );
       }
     });
+    console.log('what are you ?', usersTruck);
 
     return (
-      <div className="usersHome col-xs-12" >
-        {usersTruck}
+      <div className="container">
+        <div>
+          <h1>UsersHome</h1>
+        </div>
+        <div className="row">
+          <div className="col-xs-6">
+            <p>{usersTruck.name}</p>
+          </div>
+          <div className="col-xs-6">
+            <p>{usersTruck.imageUrl}</p>
+          </div>
+        </div>
+        <div className="col-xs-12">
+          <p>{usersTruck.bio}</p>
+        </div>
       </div>
     );
   };
