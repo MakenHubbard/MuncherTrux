@@ -1,23 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import trucksRequests from '../../firebaseRequests/trucks';
 
 import authRequests from '../../firebaseRequests/auth';
 
+const defaultTruck = {
+  name: '',
+  bio: '',
+  imageUrl: '',
+  uid: '',
+};
+
 class Register extends React.Component {
+
   state = {
     user: {
       email: 'me@dabomb.com',
       password: 'unleash',
     },
+    newTruck: defaultTruck,
   };
 
   registerClickEvent = (e) => {
-    const { user } = this.state;
+    const { user, newTruck } = this.state;
     e.preventDefault();
     authRequests
       .registerUser(user)
-      .then(() => {
-        this.props.history.push('/usersinfo');
+      .then((userResponse) => {
+        newTruck.uid = userResponse.user.uid;
+        trucksRequests.postRequest(newTruck)
+          .then(() => {
+            this.props.history.push('/usershome');
+          });
       });
   }
 
@@ -33,8 +47,27 @@ class Register extends React.Component {
     this.setState({ user: tempUser });
   }
 
+  infoFormField = (information, e) => {
+    const tempTruck = { ...this.state.newTruck };
+    tempTruck[information] = e.target.value;
+    this.setState({ newTruck: tempTruck });
+  }
+
+  nameChange = (e) => {
+    this.infoFormField('name', e);
+  };
+
+  bioChange = (e) => {
+    this.infoFormField('bio', e);
+  };
+
+  imageUrlChange = (e) => {
+    this.infoFormField('imageUrl', e);
+  };
+
   render () {
     const { user } = this.state;
+    const { newTruck } = this.state;
     return (
       <div className="Register">
         <div id="login-form">
@@ -76,19 +109,40 @@ class Register extends React.Component {
               </div>
             </div>
             <div className="form-group">
-              <div className="col-sm-12">
-                <button
-                  type="submit"
-                  className="btn btn-default col-xs-12"
-                  onClick={this.registerClickEvent}
-                >
-                  Register
-                </button>
+
+            </div>
+          </form>
+        </div>
+        <br />
+        <div className="container">
+          <form>
+            <div>
+              <div className="form-group">
+                <label htmlFor="nameOfCompany">Company Name: </label>
+                <input type="text" className="form-control" id="name" placeholder="" value={newTruck.name} onChange={this.nameChange} />
               </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="bioField">About: </label>
+              <input type="text" className="form-control" id="bio" placeholder="What would you like us to know about your company?" value={newTruck.bio} onChange={this.bioChange} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="imgUrl">Image Url: </label>
+              <input type="text" className="form-control" id="imageUrl" placeholder="" value={newTruck.imageUrl} onChange={this.imageUrlChange} />
+            </div>
+            <div className="col-sm-6">
+              <button
+                type="submit"
+                className="btn btn-default col-xs-12"
+                onClick={this.registerClickEvent}
+              >
+                Register
+              </button>
             </div>
           </form>
         </div>
       </div>
+
     );
   }
 }

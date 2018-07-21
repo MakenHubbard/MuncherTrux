@@ -11,6 +11,9 @@ class Login extends React.Component {
       email: 'me@dabomb.com',
       password: 'unleashed',
     },
+    trucks: {
+      isRegistered: true,
+    },
   };
 
   loginClickEvent = (e) => {
@@ -19,7 +22,9 @@ class Login extends React.Component {
     authRequests
       .loginUser(user)
       .then(() => {
-        this.props.history.push('/usershome');
+        if (this.state.trucks.isRegistered === true) {
+          this.props.history.push('/usershome');
+        };
       })
       .catch(error => {
         console.error('there was an error in registering', error);
