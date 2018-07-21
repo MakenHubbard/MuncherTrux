@@ -7,7 +7,6 @@ import './App.css';
 import Navbar from '../components/Navbar/Navbar';
 import UsersHome from '../components/UsersHome/UsersHome';
 import Register from '../components/Register/Register';
-import UsersInfo from '../components/UsersInfo/UsersInfo';
 import Login from '../components/Login/Login';
 import EventsList from '../components/EventsList/EventsList';
 import AddEvent from '../components/AddEvent/AddEvent';
@@ -79,7 +78,7 @@ class App extends Component {
                 <Switch>
                   <Route path="/" exact component={Login} />
                   <PrivateRoute
-                    path="/UsersHome"
+                    path="/usershome"
                     authed={this.state.authed}
                     component={UsersHome}
                   />
@@ -87,11 +86,6 @@ class App extends Component {
                     path='/register'
                     authed={this.state.authed}
                     component={Register}
-                  />
-                  <PublicRoute
-                    path='/usersinfo'
-                    authed={this.state.authed}
-                    component={UsersInfo}
                   />
                   <PublicRoute
                     path='/login'
