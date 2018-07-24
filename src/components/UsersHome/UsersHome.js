@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import trucksRequests from '../../firebaseRequests/trucks';
 import authRequests from '../../firebaseRequests/auth';
 
@@ -46,6 +47,9 @@ class UsersHome extends React.Component {
           <h1>Users Home</h1>
         </div>
         {usersTruck ? usersTruck : null}
+        <button>
+          <Link to='/eventslist'> Events </Link>
+        </button>
       </div>
 
     );
