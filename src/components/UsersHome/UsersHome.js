@@ -27,7 +27,7 @@ class UsersHome extends React.Component {
         <div key={truck.id} index={index}>
           <div className="row">
             <div className="col-xs-6">
-              {truck.imageUrl}
+              <img src={truck.imageUrl} alt="yes"/>
             </div>
             <div className="col-xs-6">
               {truck.name}
