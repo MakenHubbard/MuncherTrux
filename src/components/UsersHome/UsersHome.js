@@ -13,42 +13,41 @@ class UsersHome extends React.Component {
     trucksRequests
       .getRequest(authRequests.getUid())
       .then((trucks) => {
-        this.setState({ trucks: trucks });
+        this.setState({ trucks });
       })
       .catch((err) => {
         console.error('error in the get request in user home', err);
       });
   }
 
-  render() {
-    const currentUserUid = authRequests.getUid();
-    const usersTruck = this.state.trucks.map((truck) => {
-      if (truck.uid === currentUserUid) {
-        return (
-            <div className="container">
-            <div>
-              <h1>UsersHome</h1>
+  render () {
+    const usersTruck = this.state.trucks.map((truck, index) => {
+      return (
+        <div key={truck.id} index={index}>
+          <div className="row">
+            <div className="col-xs-6">
+              {truck.imageUrl}
             </div>
-            <div className="row">
-              <div className="col-xs-6">
-                <p>{truck.name}</p>
-              </div>
-              <div className="col-xs-6">
-                <p>{truck.imageUrl}</p>
-              </div>
-            </div>
-            <div className="col-xs-12">
-              <p>{truck.bio}</p>
+            <div className="col-xs-6">
+              {truck.name}
             </div>
           </div>
-        );
-      }
+          <br />
+          <div className="col-xs-12">
+            {truck.bio}
+          </div>
+        </div>
+      );
     });
 
     return (
-      <div className="usersHome col-xs-12" >
-        {usersTruck}
+      <div className="container">
+        <div>
+          <h1>Users Home</h1>
+        </div>
+        {usersTruck ? usersTruck : null}
       </div>
+
     );
   };
 };

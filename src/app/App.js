@@ -6,6 +6,7 @@ import './App.css';
 
 import Navbar from '../components/Navbar/Navbar';
 import UsersHome from '../components/UsersHome/UsersHome';
+import NewTruck from '../components/NewTruck/NewTruck';
 import Register from '../components/Register/Register';
 import Login from '../components/Login/Login';
 import EventsList from '../components/EventsList/EventsList';
@@ -77,15 +78,16 @@ class App extends Component {
               <div className="row">
                 <Switch>
                   <Route path="/" exact component={Login} />
+                  <Route path="/register" exact component={Register} />
                   <PrivateRoute
                     path="/usershome"
                     authed={this.state.authed}
                     component={UsersHome}
                   />
-                  <PublicRoute
-                    path='/register'
+                  <PrivateRoute
+                    path="/newtruck"
                     authed={this.state.authed}
-                    component={Register}
+                    component={NewTruck}
                   />
                   <PublicRoute
                     path='/login'

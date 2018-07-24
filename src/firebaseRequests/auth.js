@@ -1,7 +1,15 @@
 import firebase from 'firebase';
 
 const registerUser = (user) => {
-  return firebase.auth().createUserWithEmailAndPassword(user.email, user.password);
+  return new Promise((resolve, reject) => {
+    firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
 };
 
 const loginUser = (user) => {
@@ -16,4 +24,4 @@ const getUid = () => {
   return firebase.auth().currentUser.uid;
 };
 
-export default {registerUser, loginUser, logoutUser, getUid};
+export default { registerUser, loginUser, logoutUser, getUid };
