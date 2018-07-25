@@ -4,9 +4,9 @@
 		"city": "Nashville",
 		"state": "TN",
 		"zip": 37216,
-		"openTime": "1:00 PM",
-		"arrival": "10:00 PM",
-		"departure": "Live On The Green",
+		"arrival": "1:00 PM",
+		"departure": "10:00 PM",
+		"eventAttending": "Live On The Green",
 		"uid": "036X32CpMyP0DqLpKA7t7FJq9Kh1"
 	},
 	"schedule1": {
