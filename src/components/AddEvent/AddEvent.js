@@ -26,8 +26,7 @@ class AddEvent extends React.Component {
     e.preventDefault();
     const uid = authRequest.getUid();
     newSchedule.uid = uid;
-    eventRequests
-      .postRequest(newSchedule)
+    eventRequests.postRequest(newSchedule)
       .then(() => {
         this.props.history.push('/eventslist');
       })
@@ -36,51 +35,86 @@ class AddEvent extends React.Component {
       });
   }
 
+  submitScheduleEvent = (info, e) => {
+    const tempSchedule = { ...this.state.newSchedule };
+    tempSchedule[info] = e.target.value;
+    this.setState({ newSchedule: tempSchedule });
+  };
+
+  eventAttendingChange = (e) => {
+    this.submitScheduleEvent('eventAttending', e);
+  }
+
+  addressChange = (e) => {
+    this.submitScheduleEvent('address', e);
+  }
+
+  cityChange = (e) => {
+    this.submitScheduleEvent('city', e);
+  }
+
+  stateChange = (e) => {
+    this.submitScheduleEvent('state', e);
+  }
+
+  zipCodeChange = (e) => {
+    this.submitScheduleEvent('zip', e);
+  }
+
+  arrivalTime = (e) => {
+    this.submitScheduleEvent('arrival', e);
+  }
+
+  departureTime = (e) => {
+    this.submitScheduleEvent('departure', e);
+  }
+
   render () {
+    const { newSchedule } = this.state;
     return (
       <div>
-        <form class="form-horizontal">
+        <form className="form-horizontal">
           <div className="form-group">
-            <label htmlFor="event" className="col-sm-2 control-label">Name of Event: </label>
+            <label htmlFor="theEvent" className="col-sm-2">Name of Event: </label>
             <div className="col-sm-10">
-              <input type="text" className="form-control" id="event" placeholder="" />
+              <input type="text" className="form-control" id="event" placeholder="" value={newSchedule.eventAttending} onChange={this.eventAttendingChange} />
             </div>
           </div>
           <div className="row">
             <div className="form-group">
-              <label htmlFor="address" className="col-sm-2 control-label">Address: </label>
+              <label htmlFor="theAddress" className="col-sm-2">Address: </label>
               <div className="col-sm-3">
-                <input type="text" class="form-control" id="address" placeholder="1234 main St." />
+                <input type="text" className="form-control" id="address" placeholder="" value={newSchedule.address} onChange={this.addressChange} />
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="city" className="col-sm-2 control-label">City: </label>
+              <label htmlFor="theCity" className="col-sm-2">City: </label>
               <div className="col-sm-3">
-                <input type="text" class="form-control" id="city" placeholder="" />
+                <input type="text" className="form-control" id="city" placeholder="" value={newSchedule.city} onChange={this.cityChange} />
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="state" className="col-sm-2 control-label">State: </label>
+              <label htmlFor="theState" className="col-sm-2">State: </label>
               <div className="col-sm-3">
-                <input type="text" class="form-control" id="state" placeholder="" />
+                <input type="text" className="form-control" id="state" placeholder="" value={newSchedule.state} onChange={this.stateChange} />
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="zip" className="col-sm-2 control-label">Zip Code: </label>
+              <label htmlFor="theZip" className="col-sm-2">Zip Code: </label>
               <div className="col-sm-3">
-                <input type="text" class="form-control" id="zip" placeholder="" />
+                <input type="text" className="form-control" id="zip" placeholder="" value={newSchedule.zip} onChange={this.zipCodeChange} />
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="arrival" className="col-sm-2 control-label">From: </label>
+              <label htmlFor="theArrival" className="col-sm-2">From: </label>
               <div className="col-sm-3">
-                <input type="text" class="form-control" id="arrival" placeholder="" />
+                <input type="text" className="form-control" id="arrival" placeholder="" value={newSchedule.arrival} onChange={this.arrivalTime} />
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="departure" className="col-sm-2 control-label">To: </label>
+              <label htmlFor="theDeparture" className="col-sm-2">To: </label>
               <div className="col-sm-3">
-                <input type="text" class="form-control" id="departure" placeholder="" />
+                <input type="text" className="form-control" id="departure" placeholder="" value={newSchedule.departureTime} onChange={this.departure} />
               </div>
             </div>
           </div>

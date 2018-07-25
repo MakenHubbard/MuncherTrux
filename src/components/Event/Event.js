@@ -9,11 +9,10 @@ class Event extends React.Component {
   static propTypes = {
     event: eventShape,
     index: PropTypes.number,
-
   }
 
   render () {
-    const {event} = this.props;
+    const { event } = this.props;
     return (
       <div className="jumbotron">
         <div className="media">
@@ -30,6 +29,14 @@ class Event extends React.Component {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="row eventsPageButtons">
+          <button className="editEvent col-xs-2">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          </button>
+          <button className="deleteEvent col-xs-2">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     );
