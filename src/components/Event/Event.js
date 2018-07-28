@@ -1,14 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-import { eventShape } from '../../proopz/eventProps';
+// import { eventShape } from '../../proopz/eventProps';
 
 import './Event.css';
 
+const defaultEvent = {
+  address: '',
+  city: '',
+  state: '',
+  zip: '',
+  arrival: '',
+  departure: '',
+  eventAttending: '',
+  uid: '',
+};
+
 class Event extends React.Component {
-  static propTypes = {
-    event: eventShape,
-    index: PropTypes.number,
+  state = {
+    newEvent: defaultEvent,
   }
 
   render () {
@@ -16,13 +26,13 @@ class Event extends React.Component {
     return (
       <div className="jumbotron">
         <div className="media">
-          <div className="media-left">
-            <img className="media-object" src="..." alt="..." />
+          <div className= "media-left">
+            <img className="media-object" src="... "alt="..." />
           </div>
           <div className="media-body">
             <h4 className="media-heading">{event.eventAttending}</h4>
             <ul>
-              <li className="event text-center">
+              <li className="eventtext-center" >
                 <span className="col-xs-4">{event.address} <br /> {event.city}, {event.state} {event.zip}</span>
                 <span className="col-xs-3">From: {event.arrival}</span>
                 <span className="col-xs-3">To: {event.departure}</span>
@@ -30,12 +40,12 @@ class Event extends React.Component {
             </ul>
           </div>
         </div>
-        <div className="row eventsPageButtons">
+        <div className="row eventsPageButtons" >
           <button className="editEvent col-xs-2">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
           </button>
-          <button className="deleteEvent col-xs-2">
-            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          <button className="deleteEvent  col-xs-2">
+            <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
           </button>
         </div>
       </div>
