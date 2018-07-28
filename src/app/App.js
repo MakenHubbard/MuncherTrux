@@ -100,6 +100,11 @@ class App extends Component {
                     component={EventsList}
                   />
                   <PrivateRoute
+                    path='/eventslist/:id'
+                    authed={this.state.authed}
+                    component={Event}
+                  />
+                  <PrivateRoute
                     path='/addevent'
                     authed={this.state.authed}
                     component={AddEvent}

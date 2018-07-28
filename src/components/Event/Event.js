@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 // import { eventShape } from '../../proopz/eventProps';
+import eventRequests from '../../firebaseRequests/events';
 
 import './Event.css';
 
@@ -19,6 +20,18 @@ const defaultEvent = {
 class Event extends React.Component {
   state = {
     newEvent: defaultEvent,
+  }
+
+  deleteEvent = () => {
+    const fbId = this.props.event.id;
+    eventRequests
+      .deleteEventRequest(fbId)
+      .then(() => {
+        this.props.refreshPage();
+      })
+      .catch((err) => {
+        console.error('error in the delete event', err);
+      });
   }
 
   render () {
@@ -44,7 +57,7 @@ class Event extends React.Component {
           <button className="editEvent col-xs-2">
             <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
           </button>
-          <button className="deleteEvent  col-xs-2">
+          <button className="deleteEvent  col-xs-2" onClick={this.deleteEvent}>
             <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
           </button>
         </div>
