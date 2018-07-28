@@ -1,5 +1,5 @@
 import React from 'react';
-// need to get the values of the input field working
+
 import authRequest from '../../firebaseRequests/auth';
 import eventRequests from '../../firebaseRequests/events';
 
@@ -19,7 +19,14 @@ const defaultSchedule = {
 class AddEvent extends React.Component {
   state = {
     newSchedule: defaultSchedule,
+    // event: {},
   };
+
+  // addNewEvent = (key) => {
+  //   const newEvent = {...this.state.order};
+  //   newEvent[key] = newEvent[key] + 1 || 1;
+  //   this.setState({order: newOrder});
+  // }
 
   saveNewScheduleEvent = (e) => {
     const { newSchedule } = this.state;
