@@ -34,13 +34,19 @@ class Event extends React.Component {
       });
   }
 
+  routeToEditPage = (e) => {
+    e.preventDefault();
+    this.props.history.push(`/editevent/${this.props.event.id}`);
+
+  }
+
   render () {
     const { event } = this.props;
     return (
       <div className="jumbotron">
         <div className="media">
-          <div className= "media-left">
-            <img className="media-object" src="... "alt="..." />
+          <div className="media-left">
+            <img className="media-object" src="... " alt="..." />
           </div>
           <div className="media-body">
             <h4 className="media-heading">{event.eventAttending}</h4>
@@ -54,7 +60,7 @@ class Event extends React.Component {
           </div>
         </div>
         <div className="row eventsPageButtons" >
-          <button className="editEvent col-xs-2">
+          <button className="editEvent col-xs-2" onClick={this.routeToEditPage}>
             <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
           </button>
           <button className="deleteEvent  col-xs-2" onClick={this.deleteEvent}>

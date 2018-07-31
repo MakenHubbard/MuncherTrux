@@ -19,14 +19,7 @@ const defaultSchedule = {
 class AddEvent extends React.Component {
   state = {
     newSchedule: defaultSchedule,
-    // event: {},
   };
-
-  // addNewEvent = (key) => {
-  //   const newEvent = {...this.state.order};
-  //   newEvent[key] = newEvent[key] + 1 || 1;
-  //   this.setState({order: newOrder});
-  // }
 
   saveNewScheduleEvent = (e) => {
     const { newSchedule } = this.state;
@@ -121,7 +114,7 @@ class AddEvent extends React.Component {
             <div className="form-group">
               <label htmlFor="theDeparture" className="col-sm-2">To: </label>
               <div className="col-sm-3">
-                <input type="text" className="form-control" id="departure" placeholder="" value={newSchedule.departureTime} onChange={this.departure} />
+                <input type="text" className="form-control" id="departure" placeholder="" value={newSchedule.departureTime} onChange={this.departureTime} />
               </div>
             </div>
           </div>

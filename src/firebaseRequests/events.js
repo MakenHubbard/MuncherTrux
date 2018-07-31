@@ -22,6 +22,20 @@ const getRequest = (uid) => {
   });
 };
 
+const getJustTheOneEvent = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/schedules/${id}.json`
+      )
+      .then(res => {
+        resolve(res.data);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+};
+
 const postRequest = (newSchedule) => {
   return new Promise((resolve, reject) => {
     axios
@@ -61,4 +75,4 @@ const editEventRequest = (eventId, editedEvent) => {
   });
 };
 
-export default { postRequest, getRequest, deleteEventRequest, editEventRequest };
+export default { postRequest, getRequest, deleteEventRequest, editEventRequest, getJustTheOneEvent };

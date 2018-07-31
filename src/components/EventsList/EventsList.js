@@ -40,7 +40,8 @@ class EventsList extends React.Component {
             event={event}
             key={event.id}
             onClick={this.deleteEvent}
-            refreshPage={this.refreshPage}
+            refreshPage={this.refreshPage }
+            history={this.props.history}
           />
         );
       });
