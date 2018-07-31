@@ -41,7 +41,7 @@ class Navbar extends React.Component {
                   </ul>
                 ) : (
                   <li className="nav navbar-form navbar-right">
-                    <button className="btn btn-default">Login In</button>
+                    <button className="btn btn-default"><Link to="/login">Login In</Link></button>
                   </li>
                 )
               }
