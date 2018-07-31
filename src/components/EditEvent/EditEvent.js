@@ -22,13 +22,10 @@ class EditEvent extends React.Component {
 
   componentDidMount = () => {
     const fbId = this.props.match.params.id;
-    console.log(fbId);
     eventRequests
       .getJustTheOneEvent(fbId)
       .then((event) => {
-        console.log(event);
         this.setState({event});
-        console.log(fbId);
       })
       .catch((err) => {
         console.error('error with the get request inside edit event', err);
@@ -56,7 +53,7 @@ class EditEvent extends React.Component {
   }
 
   eventAttendingChange = (e) => {
-    this.submitEventEdit('event', e);
+    this.submitEventEdit('eventAttending', e);
   }
 
   addressChange = (e) => {
@@ -85,7 +82,6 @@ class EditEvent extends React.Component {
 
   render () {
     const { event } = this.state;
-    console.log('inside the render', event);
 
     return (
       <div>
@@ -94,7 +90,7 @@ class EditEvent extends React.Component {
           <div className="form-group">
             <label htmlFor="theEvent" className="col-sm-2">Name of Event: </label>
             <div className="col-sm-10">
-              <input type="text" className="form-control" id="event" placeholder="" value={event.eventAttending} onChange={this.eventAttendingChange}/>
+              <input type="text" className="form-control" id="eventAttending" placeholder="" value={event.eventAttending} onChange={this.eventAttendingChange}/>
             </div>
           </div>
           <div className="row">

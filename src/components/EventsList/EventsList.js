@@ -52,7 +52,7 @@ class EventsList extends React.Component {
             {eventComponents}
           </div>
           <button>
-            <Link to='/addevent'>Add Event</Link>
+            <Link to='/addevent' id="addEvent">Add Event</Link>
           </button>
         </div>
       );
