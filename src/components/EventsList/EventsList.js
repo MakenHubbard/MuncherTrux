@@ -18,9 +18,12 @@ class EventsList extends React.Component {
   }
 
   componentDidMount () {
+    this.refreshPage();
+  }
+
+  refreshPage = () => {
     eventRequests.getRequest(authRequest.getUid())
       .then((events) => {
-        console.log(events);
         this.setState({ events });
       })
       .catch((err) => {
@@ -31,12 +34,14 @@ class EventsList extends React.Component {
   render () {
     const { events } = this.state;
     if (events !== null) {
-      console.log(events);
       const eventComponents = events.map((event) => {
         return (
           <Event
             event={event}
             key={event.id}
+            onClick={this.deleteEvent}
+            refreshPage={this.refreshPage }
+            history={this.props.history}
           />
         );
       });
