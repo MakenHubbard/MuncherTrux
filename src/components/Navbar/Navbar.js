@@ -31,6 +31,9 @@ class Navbar extends React.Component {
                 authed ? (
                   <ul className="nav navbar-nav navbar-right">
                     <li className="navbar-form">
+                      <button className="btn btn-default"><Link to="/usershome" id="homeLink">Home</Link></button>
+                    </li>
+                    <li className="navbar-form">
                       <button onClick={logoutClickEvent} className="btn btn-default">
                         Logout
                       </button>

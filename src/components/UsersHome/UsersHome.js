@@ -48,7 +48,7 @@ class UsersHome extends React.Component {
         </div>
         {usersTruck ? usersTruck : null}
         <button>
-          <Link to='/eventslist'> Events </Link>
+          <Link to='/eventslist' id="eventsLink"> Events </Link>
         </button>
       </div>
 
