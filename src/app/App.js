@@ -116,7 +116,7 @@ class App extends Component {
                     component={EditEvent}
                   />
                   <PrivateRoute
-                    path='/edittruck'
+                    path='/edittruck/:id'
                     authed={this.state.authed}
                     component={EditTruck}
                   />
