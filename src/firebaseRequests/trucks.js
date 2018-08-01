@@ -34,4 +34,17 @@ const postRequest = (newTruck) => {
   });
 };
 
-export default { postRequest, getRequest };
+const editTruck = (updatedTruck, truckId) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/trucks/${truckId}.json`, updatedTruck)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+export default { postRequest, getRequest, editTruck };
