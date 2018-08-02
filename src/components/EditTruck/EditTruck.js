@@ -18,7 +18,7 @@ class EditTruck extends React.Component {
   componentDidMount () {
     const fbId = this.match.params.id;
     truckRequests
-      .getRequest(fbId)
+      .gettingUsersTruckForEdit(fbId)
       .then((truck) => {
         this.setState(truck);
       })

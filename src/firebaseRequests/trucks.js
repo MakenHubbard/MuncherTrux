@@ -34,6 +34,19 @@ const postRequest = (newTruck) => {
   });
 };
 
+const gettingUsersTruckForEdit = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/trucks/${id}.json`)
+      .then((res) => {
+        resolve(res.data);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
 const editTruck = (updatedTruck, truckId) => {
   return new Promise((resolve, reject) => {
     axios
@@ -47,4 +60,4 @@ const editTruck = (updatedTruck, truckId) => {
   });
 };
 
-export default { postRequest, getRequest, editTruck };
+export default { postRequest, getRequest, editTruck, gettingUsersTruckForEdit };

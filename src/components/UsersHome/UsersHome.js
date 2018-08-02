@@ -23,7 +23,7 @@ class UsersHome extends React.Component {
 
   routeToEditTruck = (e) => {
     e.preventDefault();
-    this.props.history.push(`/edittruck/${this.props.event.id}`);
+    this.props.history.push(`/edittruck/${this.props.trucks.id}`);
   }
 
   render () {
