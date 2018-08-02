@@ -26,10 +26,10 @@ class UsersHome extends React.Component {
     this.props.history.push(`/edittruck/${this.props.trucks.id}`);
   }
 
-  render () {
+  render() {
     const usersTruck = this.state.trucks.map((truck, index) => {
       return (
-        <div key={truck.id} index={index}>
+        <div key={truck.id} index={index} className="theInsides">
           <div className="row">
             <div className="col-xs-4 home-img">
               <img src={truck.imageUrl} alt={truck.imageUrl} />
