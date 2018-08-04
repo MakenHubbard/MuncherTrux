@@ -44,11 +44,11 @@ class Event extends React.Component {
       <div className="jumbotron">
         <div className="media">
           <div className="media-left">
-            <img className="media-object" src="... " alt="..." />
+            <img className="media-object" src={event.imageUrl} alt={event.imageUrl}/>
           </div>
           <div className="media-body">
             <h4 className="media-heading">{event.eventAttending}</h4>
-            <ul>
+            <ul id="eventsList">
               <li className="eventtext-center" >
                 <span className="col-xs-4">{event.address} <br /> {event.city}, {event.state} {event.zip}</span>
                 <span className="col-xs-3">From: {event.arrival}</span>

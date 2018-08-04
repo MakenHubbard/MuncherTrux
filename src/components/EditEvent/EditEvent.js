@@ -11,6 +11,7 @@ const defaultEditEvent = {
   arrival: '',
   departure: '',
   eventAttending: '',
+  imageUrl: '',
   uid: '',
 };
 
@@ -72,6 +73,10 @@ class EditEvent extends React.Component {
     this.submitEventEdit('zip', e);
   }
 
+  imageUrlChange = (e) => {
+    this.submitEventEdit('imageUrl', e);
+  }
+
   startTimeChange = (e) => {
     this.submitEventEdit('arrival', e);
   }
@@ -116,6 +121,12 @@ class EditEvent extends React.Component {
               <label htmlFor="theZip" className="col-sm-2">Zip Code: </label>
               <div className="col-sm-3">
                 <input type="text" className="form-control" id="zip" placeholder="" value={event.zip} onChange={this.zipChange}/>
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="theImage" className="col-sm-2">Image Url: </label>
+              <div className="col-sm-3">
+                <input type="text" className="form-control" id="imageUrl" placeholder="" value={event.imageUrl} onChange={this.imageUrlChange}/>
               </div>
             </div>
             <div className="form-group">
