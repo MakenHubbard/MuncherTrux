@@ -1,7 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
-// import { eventShape } from '../../proopz/eventProps';
 import eventRequests from '../../firebaseRequests/events';
 
 import './Event.css';

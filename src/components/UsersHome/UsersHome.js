@@ -23,10 +23,10 @@ class UsersHome extends React.Component {
 
   routeToEditTruck = (e) => {
     e.preventDefault();
-    this.props.history.push(`/edittruck/${this.props.trucks.id}`);
+    this.props.history.push(`/edittruck/${this.state.trucks[0].id}`);
   }
 
-  render() {
+  render () {
     const usersTruck = this.state.trucks.map((truck, index) => {
       return (
         <div key={truck.id} index={index} className="theInsides">
@@ -47,14 +47,14 @@ class UsersHome extends React.Component {
     });
 
     return (
-      <div className="container">
+      <div className="container" id="containerUsersHome">
         {usersTruck ? usersTruck : null}
         <div className="row">
-          <button className="col-xs-5">
+          <button className="col-xs-3 col-xs-offset-2" id="eventsUsersHomeBtn">
             <Link to='/eventslist' id="eventsLink"> Events </Link>
           </button>
-          <button className="col-xs-5" onClick={this.routeToEditTruck}>
-            <Link to='/editTruck' id="editTruck"> Edit </Link>
+          <button className="col-xs-3 col-xs-offset-2" id="editUsersHomeBtn" onClick={this.routeToEditTruck}>
+            <Link to='/editTruck' id="editTruck"> Edit Info</Link>
           </button>
         </div>
       </div>

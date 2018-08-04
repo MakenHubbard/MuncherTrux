@@ -47,7 +47,7 @@ const gettingUsersTruckForEdit = (id) => {
   });
 };
 
-const editTruck = (updatedTruck, truckId) => {
+const editTruck = (truckId, updatedTruck) => {
   return new Promise((resolve, reject) => {
     axios
       .put(`${constants.firebaseConfig.databaseURL}/trucks/${truckId}.json`, updatedTruck)

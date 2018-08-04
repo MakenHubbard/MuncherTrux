@@ -16,11 +16,11 @@ class EditTruck extends React.Component {
   }
 
   componentDidMount () {
-    const fbId = this.match.params.id;
+    const fbId = this.props.match.params.id;
     truckRequests
       .gettingUsersTruckForEdit(fbId)
       .then((truck) => {
-        this.setState(truck);
+        this.setState({truck});
       })
       .catch((err) => {
         console.error('something went wrong with the getRequest in the edit truck');
@@ -28,10 +28,11 @@ class EditTruck extends React.Component {
   }
 
   saveNewTruckEdit = (e) => {
-    const fbId = this.props.match.params.id;
+    const truckId = this.props.match.params.id;
+    const updatedTruck = this.state.truck;
     e.preventDefault();
     truckRequests
-      .editTruck(fbId, this.state.truck)
+      .editTruck(truckId, updatedTruck)
       .then(() => {
         this.props.history.push('/usershome');
       })
@@ -47,15 +48,15 @@ class EditTruck extends React.Component {
   }
 
   editNameChange = (e) => {
-    this.submitTruckEdit('editName', e);
+    this.submitTruckEdit('name', e);
   }
 
   editBioChange = (e) => {
-    this.submitTruckEdit('editBio', e);
+    this.submitTruckEdit('bio', e);
   }
 
   editImageChange = (e) => {
-    this.submitTruckEdit('editImage', e);
+    this.submitTruckEdit('imageUrl', e);
   }
 
   render () {
@@ -67,16 +68,16 @@ class EditTruck extends React.Component {
             <div>
               <div className="form-group">
                 <label htmlFor="nameOfCompany">Company Name: </label>
-                <input type="text" className="form-control" id="editName" placeholder="" value={truck.name} onChange={this.editNameChange} />
+                <input type="text" className="form-control" id="name" placeholder="" defaultValue={truck.name} onChange={this.editNameChange} />
               </div>
             </div>
             <div className="form-group">
               <label htmlFor="bioField">About: </label>
-              <input type="text" className="form-control" id="editBio" placeholder="What would you like us to know about your company?" value={truck.bio} onChange={this.editBioChange} />
+              <input type="text" className="form-control" id="bio" placeholder="What would you like us to know about your company?" defaultValue={truck.bio} onChange={this.editBioChange} />
             </div>
             <div className="form-group">
               <label htmlFor="imgUrl">Image Url: </label>
-              <input type="text" className="form-control" id="editImage" placeholder="" value={truck.imageUrl} onChange={this.editImageChange} />
+              <input type="text" className="form-control" id="imageUrl" placeholder="" defaultValue={truck.imageUrl} onChange={this.editImageChange} />
             </div>
             <div className="col-sm-6">
               <button
