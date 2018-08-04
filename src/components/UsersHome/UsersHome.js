@@ -21,35 +21,42 @@ class UsersHome extends React.Component {
       });
   }
 
+  routeToEditTruck = (e) => {
+    e.preventDefault();
+    this.props.history.push(`/edittruck/${this.state.trucks[0].id}`);
+  }
+
   render () {
     const usersTruck = this.state.trucks.map((truck, index) => {
       return (
-        <div key={truck.id} index={index}>
+        <div key={truck.id} index={index} className="theInsides">
           <div className="row">
-            <div className="col-xs-6">
-              <img src={truck.imageUrl} alt={truck.imageUrl}/>
+            <div className="col-xs-4 home-img">
+              <img src={truck.imageUrl} alt={truck.imageUrl} />
             </div>
-            <div className="col-xs-6">
-              {truck.name}
+            <div className="col-xs-3 col-xs-offset-2" id="home-h1">
+              <h1>{truck.name}</h1>
             </div>
           </div>
           <br />
           <div className="col-xs-12">
-            {truck.bio}
+            <p id="home-p">{truck.bio}</p>
           </div>
         </div>
       );
     });
 
     return (
-      <div className="container">
-        <div>
-          <h1>Users Home</h1>
-        </div>
+      <div className="container" id="containerUsersHome">
         {usersTruck ? usersTruck : null}
-        <button>
-          <Link to='/eventslist' id="eventsLink"> Events </Link>
-        </button>
+        <div className="row">
+          <button className="col-xs-3 col-xs-offset-2" id="eventsUsersHomeBtn">
+            <Link to='/eventslist' id="eventsLink"> Events </Link>
+          </button>
+          <button className="col-xs-3 col-xs-offset-2" id="editUsersHomeBtn" onClick={this.routeToEditTruck}>
+            <Link to='/editTruck' id="editTruck"> Edit Info</Link>
+          </button>
+        </div>
       </div>
 
     );

@@ -34,4 +34,30 @@ const postRequest = (newTruck) => {
   });
 };
 
-export default { postRequest, getRequest };
+const gettingUsersTruckForEdit = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/trucks/${id}.json`)
+      .then((res) => {
+        resolve(res.data);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+const editTruck = (truckId, updatedTruck) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/trucks/${truckId}.json`, updatedTruck)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+export default { postRequest, getRequest, editTruck, gettingUsersTruckForEdit };

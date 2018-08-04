@@ -12,6 +12,7 @@ import Login from '../components/Login/Login';
 import EventsList from '../components/EventsList/EventsList';
 import AddEvent from '../components/AddEvent/AddEvent';
 import EditEvent from '../components/EditEvent/EditEvent';
+import EditTruck from '../components/EditTruck/EditTruck';
 import fbConnection from '../firebaseRequests/connection';
 
 fbConnection();
@@ -113,6 +114,11 @@ class App extends Component {
                     path='/editevent'
                     authed={this.state.authed}
                     component={EditEvent}
+                  />
+                  <PrivateRoute
+                    path='/edittruck/:id'
+                    authed={this.state.authed}
+                    component={EditTruck}
                   />
                 </Switch>
               </div>
