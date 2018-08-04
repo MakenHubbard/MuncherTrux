@@ -10,6 +10,7 @@ const defaultSchedule = {
   city: '',
   state: '',
   zip: '',
+  imageUrl: '',
   arrival: '',
   departure: '',
   eventAttending: '',
@@ -61,6 +62,10 @@ class AddEvent extends React.Component {
     this.submitScheduleEvent('zip', e);
   }
 
+  imageUrlChange = (e) => {
+    this.submitScheduleEvent('imageUrl',e);
+  }
+
   arrivalTime = (e) => {
     this.submitScheduleEvent('arrival', e);
   }
@@ -103,6 +108,12 @@ class AddEvent extends React.Component {
               <label htmlFor="theZip" className="col-sm-2">Zip Code: </label>
               <div className="col-sm-3">
                 <input type="text" className="form-control" id="zip" placeholder="" value={newSchedule.zip} onChange={this.zipCodeChange} />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="theImage" className="col-sm-2">ImageUrl: </label>
+              <div className="col-sm-3">
+                <input type="text" className="form-control" id="imageUrl" placeholder="" value={newSchedule.imageUrl} onChange={this.imageUrlChange} />
               </div>
             </div>
             <div className="form-group">
