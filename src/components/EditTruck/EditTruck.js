@@ -60,7 +60,7 @@ class EditTruck extends React.Component {
   }
 
   render () {
-    const truck = this.state;
+    const {truck} = this.state;
     return (
       <div className="EditTruck">
         <div className="container">
@@ -73,7 +73,7 @@ class EditTruck extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="bioField">About: </label>
-              <input type="text" className="form-control" id="bio" placeholder="What would you like us to know about your company?" value={truck.bio} onChange={this.editBioChange} />
+              <input type="text" className="form-control" id="bio" placeholder="" value={truck.bio} onChange={this.editBioChange} />
             </div>
             <div className="form-group">
               <label htmlFor="imgUrl">Image Url: </label>
