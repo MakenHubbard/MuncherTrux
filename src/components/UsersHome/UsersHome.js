@@ -31,16 +31,16 @@ class UsersHome extends React.Component {
       return (
         <div key={truck.id} index={index} className="theInsides">
           <div className="row">
-            <div className="col-xs-4 home-img">
+            <div className="col-xs-3 home-img">
               <img src={truck.imageUrl} alt={truck.imageUrl} />
             </div>
             <div className="col-xs-3 col-xs-offset-2" id="home-h1">
               <h1>{truck.name}</h1>
             </div>
-          </div>
-          <br />
-          <div className="col-xs-12">
-            <p id="home-p">{truck.bio}</p>
+            <br />
+            <div className="col-xs-6 col-xs-offset-2">
+              <p id="home-p">{truck.bio}</p>
+            </div>
           </div>
         </div>
       );
