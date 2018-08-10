@@ -9,9 +9,13 @@
   box-shadow: 4px 4px;
 }
 
+.container-fluid {
+  padding: -120px;
+}
+
 #addressInfo {
   padding-top: 15px;
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .event-heading {
@@ -30,9 +34,27 @@
 
 #toTime {
   padding-top: 28px;
+  font-size: 20px;
 }
 
 #fromTime{
   padding-top: 28px;
+  font-size: 20px;
+}
+
+.editEvent {
+  background-color: darkred;
+  color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding-top: 3px;
+}
+
+.deleteEvent{
+  background-color: darkslategray;
+  color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding-top: 3px;
 }
 
