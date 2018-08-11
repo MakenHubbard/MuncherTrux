@@ -27,10 +27,18 @@ img {
   z-index:0;
 }
 
+#eventsUsersHomeBtn:hover {
+  background-color: red;
+  box-shadow: 4px 4px 4px black;
+  transform:scale(.9,.9);
+    -webkit-transform:scale(.9,.9);
+    -moz-transform:scale(.9,.9);
+}
+
 #eventsUsersHomeBtn {
   margin-bottom: 10px;
   background-color: darkred;
-  border: solid 1px lightgray;
+  border: solid 1px black;
   border-radius: 4px;
 }
 
@@ -38,10 +46,18 @@ img {
   color: white;
 }
 
+#editUsersHomeBtn:hover {
+  background-color: #8CABA8;
+  box-shadow: 4px 4px 4px black;
+  transform:scale(.9,.9);
+    -webkit-transform:scale(.9,.9);
+    -moz-transform:scale(.9,.9);
+}
+
 #editUsersHomeBtn {
   margin-bottom: 10px;
   background-color:  darkslategray;
-  border: solid 1px lightgray;
+  border: solid 1px black;
   border-radius: 4px;
 }
 

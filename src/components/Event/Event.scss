@@ -50,6 +50,22 @@
   padding-top: 3px;
 }
 
+.editEvent:hover {
+  background-color: red;
+  box-shadow: 4px 4px 4px black;
+  transform:scale(.9,.9);
+    -webkit-transform:scale(.9,.9);
+    -moz-transform:scale(.9,.9);
+}
+
+.deleteEvent:hover {
+  background-color: #8CABA8;
+  box-shadow: 4px 4px  black;
+  transform:scale(.9,.9);
+    -webkit-transform:scale(.9,.9);
+    -moz-transform:scale(.9,.9);
+}
+
 .deleteEvent{
   background-color: darkslategray;
   color: white;
