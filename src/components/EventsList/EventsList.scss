@@ -1,3 +1,28 @@
 #addEvent {
+  background-color: #CF5300;
+  color: white;
+  border: 3px solid black;
+  margin-bottom: 25px;
+  border-radius: 6px;
+}
+
+#addEvent:hover {
+  background-color: orange;
+  box-shadow: 3px 3px 3px  black;
+  height: 30px;
+  transition: background-color .5s;
+}
+
+a:visited {
   color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#eventListTitle {
+  color: white;
 }

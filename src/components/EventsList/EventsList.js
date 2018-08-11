@@ -47,12 +47,12 @@ class EventsList extends React.Component {
       });
       return (
         <div className="container">
-          <h1>Events</h1>
+          <h1 id="eventListTitle">Events</h1>
           <div>
             {eventComponents}
           </div>
-          <button>
-            <Link to='/addevent' id="addEvent">Add Event</Link>
+          <button id="addEvent" className="col-xs-4 col-xs-offset-4">
+            <Link to='/addevent' id="addEventLink">Add Event</Link>
           </button>
         </div>
       );
