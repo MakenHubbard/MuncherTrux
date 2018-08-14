@@ -13,6 +13,8 @@ import EventsList from '../components/EventsList/EventsList';
 import AddEvent from '../components/AddEvent/AddEvent';
 import EditEvent from '../components/EditEvent/EditEvent';
 import EditTruck from '../components/EditTruck/EditTruck';
+import LandingPage from '../components/LandingPage/LandingPage';
+import VisitorsHome from '../components/VisitorsHome/VisitorsHome';
 import fbConnection from '../firebaseRequests/connection';
 
 fbConnection();
@@ -78,7 +80,7 @@ class App extends Component {
             <div className="container" id="main-block">
               <div className="row">
                 <Switch>
-                  <Route path="/" exact component={Login} />
+                  <Route path="/" exact component={LandingPage} />
                   <Route path="/register" exact component={Register} />
                   <PrivateRoute
                     path="/usershome"
@@ -119,6 +121,11 @@ class App extends Component {
                     path='/edittruck/:id'
                     authed={this.state.authed}
                     component={EditTruck}
+                  />
+                  <PublicRoute
+                    path='/visitorshome'
+                    authed={this.state.authed}
+                    component={VisitorsHome}
                   />
                 </Switch>
               </div>

@@ -21,6 +21,26 @@ const getRequest = (uid) => {
   });
 };
 
+const getAllTrucksRequest = () => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/trucks.json`)
+      .then((res) => {
+        const trucks = [];
+        if (res.data !== null) {
+          Object.keys(res.data).forEach(fbKey => {
+            res.data[fbKey].id = fbKey;
+            trucks.push(res.data[fbKey]);
+          });
+        }
+        resolve(trucks);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
 const postRequest = (newTruck) => {
   return new Promise((resolve, reject) => {
     axios
@@ -60,4 +80,4 @@ const editTruck = (truckId, updatedTruck) => {
   });
 };
 
-export default { postRequest, getRequest, editTruck, gettingUsersTruckForEdit };
+export default { postRequest, getRequest, editTruck, gettingUsersTruckForEdit, getAllTrucksRequest };
