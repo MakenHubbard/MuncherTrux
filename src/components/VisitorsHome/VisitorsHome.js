@@ -18,7 +18,6 @@ class VisitorsHome extends React.Component {
   }
 
   render () {
-    console.log(this.state.trucks);
     const allTrucks = this.state.trucks.map((truck, index) => {
       return (
         <div key={truck.id} index={index}>
