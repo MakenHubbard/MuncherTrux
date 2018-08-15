@@ -21,7 +21,6 @@ class VisitorsHome extends React.Component {
   }
 
   render () {
-    console.log('what is in trucks', this.state.trucks);
     const allTrucks = this.state.trucks.map((truck, index) => {
       const routeToVisitorsEvents = (e) => {
         e.preventDefault();

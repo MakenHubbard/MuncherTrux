@@ -10,11 +10,10 @@ class VisitorsEvents extends React.Component {
 
   componentDidMount = () => {
     const truckId = this.props.match.params.id;
-    console.log('truckId', truckId);
     eventsRequest
       .getAllEventsForTruck(truckId)
       .then((events) => {
-        this.setState({events}, console.log(this.state.events));
+        this.setState({events});
       })
       .catch((err) => {
         console.error('error in the visitorsEvents component', err);
@@ -23,7 +22,6 @@ class VisitorsEvents extends React.Component {
   }
 
   render () {
-    console.log(this.state.events);
     const allEvents = this.state.events.map((event) => {
       return (
         <div key={event.id}>
