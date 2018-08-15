@@ -2,6 +2,7 @@ import React from 'react';
 
 import authRequest from '../../firebaseRequests/auth';
 import eventRequests from '../../firebaseRequests/events';
+import truckRequests from '../../firebaseRequests/trucks';
 
 import './AddEvent.css';
 
@@ -14,6 +15,7 @@ const defaultSchedule = {
   arrival: '',
   departure: '',
   eventAttending: '',
+  truckId: '',
   uid: '',
 };
 
@@ -27,13 +29,18 @@ class AddEvent extends React.Component {
     e.preventDefault();
     const uid = authRequest.getUid();
     newSchedule.uid = uid;
-    eventRequests.postRequest(newSchedule)
-      .then(() => {
-        this.props.history.push('/eventslist');
+    truckRequests
+      .getRequest(uid)
+      .then((res) => {
+        newSchedule.truckId = res[0].id;
+        eventRequests.postRequest(newSchedule)
+          .then(() => {
+            this.props.history.push('/eventslist');
+          })
+          .catch((err) => {
+            console.error('inside the addEvents postRequest', err);
+          });
       })
-      .catch((err) => {
-        console.error('inside the addEvents postRequest', err);
-      });
   }
 
   submitScheduleEvent = (info, e) => {

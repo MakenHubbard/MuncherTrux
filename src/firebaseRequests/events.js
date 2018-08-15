@@ -36,6 +36,26 @@ const getJustTheOneEvent = (id) => {
   });
 };
 
+const getAllEventsForTruck = (truckId) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/schedules.json?orderBy="truckId"&equalTo="${truckId}"`)
+      .then(res => {
+        const events = [];
+        if (res.data !== null) {
+          Object.keys(res.data).forEach(fbKey => {
+            res.data[fbKey].id = fbKey;
+            events.push(res.data[fbKey]);
+          });
+        }
+        resolve(events);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+};
+
 const postRequest = (newSchedule) => {
   return new Promise((resolve, reject) => {
     axios
@@ -75,4 +95,4 @@ const editEventRequest = (eventId, editedEvent) => {
   });
 };
 
-export default { postRequest, getRequest, deleteEventRequest, editEventRequest, getJustTheOneEvent };
+export default { postRequest, getRequest, deleteEventRequest, editEventRequest, getJustTheOneEvent, getAllEventsForTruck };

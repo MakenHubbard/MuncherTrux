@@ -15,6 +15,7 @@ import EditEvent from '../components/EditEvent/EditEvent';
 import EditTruck from '../components/EditTruck/EditTruck';
 import LandingPage from '../components/LandingPage/LandingPage';
 import VisitorsHome from '../components/VisitorsHome/VisitorsHome';
+import VisitorsEvents from '../components/VisitorsEvents/VisitorsEvents';
 import fbConnection from '../firebaseRequests/connection';
 
 fbConnection();
@@ -126,6 +127,11 @@ class App extends Component {
                     path='/visitorshome'
                     authed={this.state.authed}
                     component={VisitorsHome}
+                  />
+                  <PublicRoute
+                    path='/visitorsevents/:id'
+                    authed={this.state.authed}
+                    component={VisitorsEvents}
                   />
                 </Switch>
               </div>

@@ -1,0 +1,34 @@
+.allTruckStuff {
+  background-color: slategray;
+  opacity: .9;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 4px 4px 4px 4px darkslategray;
+  margin-bottom: 16px;
+}
+
+.infoForVisitors {
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+.visitorsCheckEvents {
+  margin-top: 25px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: darkblue;
+  color: white;
+}
+
+.visitorsCheckEvents:hover {
+  background-color: blue;
+  box-shadow: 4px 4px 4px black;
+  border: 1px solid black;
+  transform:scale(.9,.9);
+    -webkit-transform:scale(.9,.9);
+    -moz-transform:scale(.9,.9);
+}
+
+#visitorEventsBtn {
+  color: white;
+}
