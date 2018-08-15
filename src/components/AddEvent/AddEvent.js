@@ -40,7 +40,7 @@ class AddEvent extends React.Component {
           .catch((err) => {
             console.error('inside the addEvents postRequest', err);
           });
-      })
+      });
   }
 
   submitScheduleEvent = (info, e) => {
