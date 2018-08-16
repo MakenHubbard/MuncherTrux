@@ -1,3 +1,40 @@
-.landingHead {
-  color: black;
+
+
+.customer {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZvlGrSzMLJbKVkVO9eKav7GXIADHKWxXjOXyi6iW0E2lYE6NW');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: inherit;
+  border-radius: 30px;
+  height: 300px;
+  opacity: .9;
+  margin-right: 70px;
+  margin-left: 140px;
+  margin-top: 50px;
+}
+
+.visitorsLandingWords {
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  box-shadow: 4px 4px 4px red;
+  margin-top: 7em;
+  font-family: 'Permanent Marker', cursive;
+  padding-bottom: 2px;
+}
+
+.visitorsLandingP {
+  color: white;
+  font-size: 1.2em;
+}
+
+.owner {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_XiACw-JJ5Ujmt7Mbv-vFILKV23jRXg6M7NAgAT2E7o2pidECyA');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  height: 300px;
+  opacity: .9;
+  margin-left: 40px;
+  margin-top: 50px;
 }

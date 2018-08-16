@@ -1,6 +1,5 @@
 import React from 'react';
 import trucksRequest from '../../firebaseRequests/trucks';
-// import { Link } from 'react-router-dom';
 
 import './VisitorsHome.css';
 
