@@ -1,0 +1,26 @@
+#addEventFormBack {
+  background-color: slategray;
+  opacity: .9;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px black;
+}
+
+#addEventForm {
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.saveEventBtn {
+  background-color: #CF5300;
+  color: white;
+  border: 3px solid black;
+  margin-bottom: 25px;
+  border-radius: 6px;
+}
+
+.saveEventBtn:hover {
+  background-color: orange;
+  box-shadow: 3px 3px 3px  black;
+  height: 30px;
+  transition: background-color .5s;
+}
