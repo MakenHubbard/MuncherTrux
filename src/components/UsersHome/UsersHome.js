@@ -26,7 +26,7 @@ class UsersHome extends React.Component {
     this.props.history.push(`/edittruck/${this.state.trucks[0].id}`);
   }
 
-  render() {
+  render () {
     const usersTruck = this.state.trucks.map((truck, index) => {
       return (
         <div key={truck.id} index={index} className="theInsides">

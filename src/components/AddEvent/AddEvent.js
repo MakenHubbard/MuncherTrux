@@ -89,7 +89,7 @@ class AddEvent extends React.Component {
           <form className="form-horizontal">
             <div className="form-group">
               <label htmlFor="theEvent" className="col-sm-2">Name of Event: </label>
-              <div className="col-sm-7">
+              <div className="col-sm-3">
                 <input type="text" className="form-control" id="event" placeholder="" value={newSchedule.eventAttending} onChange={this.eventAttendingChange} />
               </div>
             </div>

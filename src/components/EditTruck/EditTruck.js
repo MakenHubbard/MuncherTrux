@@ -62,8 +62,8 @@ class EditTruck extends React.Component {
   render () {
     const {truck} = this.state;
     return (
-      <div className="EditTruck">
-        <div className="container">
+      <div className="EditTruck" id="editTruckFormBack">
+        <div className="container" id="editTruckForm">
           <form>
             <div>
               <div className="form-group">
@@ -82,7 +82,7 @@ class EditTruck extends React.Component {
             <div className="col-sm-6">
               <button
                 type="submit"
-                className="btn btn-default col-xs-12"
+                className="btn btn-default col-xs-12 saveEditTruckBtn"
                 onClick={this.saveNewTruckEdit}
               >
                 Save Edit
