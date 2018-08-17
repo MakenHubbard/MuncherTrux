@@ -1,0 +1,38 @@
+#editTruckFormBack {
+  background-color: slategray;
+  opacity: .9;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px black;
+}
+
+#editTruckForm {
+  margin-top: 25px;
+  padding-bottom: 10px;
+}
+
+.saveEditTruckBtn {
+  background-color: #CF5300;
+  color: black;
+  border: 3px solid black;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  margin-left: 50%;
+}
+
+.saveEditTruckBtn:hover {
+  background-color: orange;
+  box-shadow: 3px 3px 3px  black;
+  border: 3px solid black;
+  color: black;
+  padding-bottom: 25px;
+  height: 30px;
+  transition: background-color .5s;
+}
+
+.form-control {
+  border: 2px solid black;
+}
+
+label {
+  font-family: 'Baloo Bhai', cursive;
+}
