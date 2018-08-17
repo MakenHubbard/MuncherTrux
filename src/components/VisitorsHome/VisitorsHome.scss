@@ -1,9 +1,24 @@
+#visitorsHomeMainHead {
+  color: black;
+  text-shadow: 2px 2px red;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 2px red;
+}
+
+.visitorsHomePageImg {
+  border-radius: 40%;
+}
+
+#visitorsHomePageTruckName {
+  border-bottom: 2px solid white;
+}
+
 .allTruckStuff {
-  background-color: slategray;
+  background-color: black;
   opacity: .9;
   color: white;
   border-radius: 6px;
-  box-shadow: 4px 4px 4px 4px darkslategray;
+  box-shadow: 4px 4px red;
   margin-bottom: 16px;
 }
 

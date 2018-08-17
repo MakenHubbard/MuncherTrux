@@ -28,10 +28,10 @@ class VisitorsHome extends React.Component {
       return (
         <div className="row allTruckStuff" key={truck.id} index={index}>
           <div className="col-xs-4">
-            <img src={truck.imageUrl} alt={truck.imageUrl}/>
+            <img className="visitorsHomePageImg" src={truck.imageUrl} alt={truck.imageUrl}/>
           </div>
           <div className="col-xs-4 col-xs-offset-2">
-            <h2>{truck.name}</h2>
+            <h2 id="visitorsHomePageTruckName">{truck.name}</h2>
             <div className="infoForVisitors">
               <p>{truck.bio}</p>
             </div>
@@ -46,7 +46,7 @@ class VisitorsHome extends React.Component {
     });
     return (
       <div className="listOfAllTrucks">
-        <h1>Munchers</h1>
+        <h1 id="visitorsHomeMainHead">Check Out These Food Trucks</h1>
         <div>
           {allTrucks}
         </div>

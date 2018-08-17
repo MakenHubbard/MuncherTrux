@@ -26,7 +26,7 @@ class UsersHome extends React.Component {
     this.props.history.push(`/edittruck/${this.state.trucks[0].id}`);
   }
 
-  render () {
+  render() {
     const usersTruck = this.state.trucks.map((truck, index) => {
       return (
         <div key={truck.id} index={index} className="theInsides">
@@ -50,12 +50,16 @@ class UsersHome extends React.Component {
       <div className="container" id="containerUsersHome">
         {usersTruck ? usersTruck : null}
         <div className="row">
-          <button className="col-xs-3 col-xs-offset-2" id="eventsUsersHomeBtn">
-            <Link to='/eventslist' id="eventsLink"> Events </Link>
-          </button>
-          <button className="col-xs-3 col-xs-offset-2" id="editUsersHomeBtn" onClick={this.routeToEditTruck}>
-            <Link to='/editTruck' id="editTruck"> Edit Info</Link>
-          </button>
+          <Link to='/eventslist' id="eventsLink">
+            <button className="col-xs-3 col-xs-offset-2" id="eventsUsersHomeBtn">
+              Events
+            </button>
+          </Link>
+          <Link to='/editTruck' id="editTruck">
+            <button className="col-xs-3 col-xs-offset-2" id="editUsersHomeBtn" onClick={this.routeToEditTruck}>
+              Edit Info
+            </button>
+          </Link>
         </div>
       </div>
 

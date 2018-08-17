@@ -17,7 +17,7 @@ class EventsList extends React.Component {
     events: [],
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.refreshPage();
   }
 
@@ -40,7 +40,7 @@ class EventsList extends React.Component {
             event={event}
             key={event.id}
             onClick={this.deleteEvent}
-            refreshPage={this.refreshPage }
+            refreshPage={this.refreshPage}
             history={this.props.history}
           />
         );
@@ -51,9 +51,11 @@ class EventsList extends React.Component {
           <div>
             {eventComponents}
           </div>
-          <button id="addEvent" className="col-xs-4 col-xs-offset-4">
-            <Link to='/addevent' id="addEventLink">Add Event</Link>
-          </button>
+          <Link to='/addevent' id="addEventLink">
+            <button id="addEvent" className="col-xs-4 col-xs-offset-4">
+              Add Event
+            </button>
+          </Link>
         </div>
       );
     };
