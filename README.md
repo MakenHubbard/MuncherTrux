@@ -30,23 +30,16 @@
 > You wil be able to see all the events that each registered food truck plans to attend.
 
 #### Description: Landing page
-<img src="" width="200">
-
-#### Description: Truck Owner Login
-<img src="" width="200">
-
-#### Description: Truck Registration
-<img src="" width="200">
-<img src="" width="200">
+<img src="https://raw.githubusercontent.com/MakenHubbard/MuncherTrux/master/screenshots/LandingPage.JPG" width="200">
 
 #### Description: Truck Owners Home Page
-<img src="" width="200">
+<img src="https://raw.githubusercontent.com/MakenHubbard/MuncherTrux/master/screenshots/UsersHome.JPG" width="200">
 
 #### Description: Truck Owners Add Event Page
-<img src="" width="200">
+<img src="https://raw.githubusercontent.com/MakenHubbard/MuncherTrux/master/screenshots/UsersAddEvents.JPG" width="200">
 
 #### Description: Visitors Home Page
-<img src="" width="">
+<img src="https://raw.githubusercontent.com/MakenHubbard/MuncherTrux/master/screenshots/VisitorsEvents.JPG" width="">
 
 ### How To Run:
 1. Clone Repo
