@@ -5,9 +5,9 @@ import authRequests from '../../firebaseRequests/auth';
 import './NewTruck.css';
 
 const defaultTruck = {
-  name: '',
-  bio: '',
-  imageUrl: '',
+  name: 'Tims Tantalizing Tool Belt Treats',
+  bio: 'Tim has dedicated his entire life to taking taste to higher level. Some  would it is his destiny to grace this world with outrageously delicious mouth hole produce. he has made his a name for himself in the upper middle eastern west.',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB15QFF3PXJd-QlTVCYJdC7H8BVsM57hbFQ6aSEqu9eCfw1Xhh',
   uid: '',
 };
 
