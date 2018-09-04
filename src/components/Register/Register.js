@@ -9,8 +9,8 @@ class Register extends React.Component {
 
   state = {
     user: {
-      email: 'timTheToolManTaylor@ToolTime.com',
-      password: 'wilsonsfence',
+      email: '',
+      password: '',
     },
   };
 
